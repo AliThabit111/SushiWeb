@@ -1,0 +1,33 @@
+{
+  "name": "TOKYO SUSHI — المنصة الرسمية للطلب المباشر",
+  "short_name": "TokyoSushi",
+  "description": "سوشي طازج بأعلى معايير الجودة — اطلب وجبتك المفضلة الآن مع التوصيل السريع.",
+  "lang": "ar",
+  "dir": "rtl",
+  "start_url": "../index.html",
+  "scope": "../",
+  "display": "standalone",
+  "background_color": "#0A0908",
+  "theme_color": "#0A0908",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "../includes-assets/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "../includes-assets/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "../includes-assets/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

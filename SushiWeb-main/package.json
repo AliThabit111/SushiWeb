@@ -1,0 +1,13 @@
+{
+  "name": "tokyo-sushi-web",
+  "version": "3.0.0",
+  "private": true,
+  "description": "TOKYO SUSHI — موقع الطلب المباشر (واجهة ثابتة + Google Apps Script backend)",
+  "scripts": {
+    "test": "node tests/run-all.js",
+    "test:catalog": "node tests/catalog.test.js",
+    "test:gas": "node tests/gas.test.js",
+    "test:app": "node tests/app.test.js",
+    "test:html": "node tests/html.test.js"
+  }
+}
