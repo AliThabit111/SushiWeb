@@ -9,6 +9,8 @@
     "test:gas": "node tests/gas.test.js",
     "test:app": "node tests/app.test.js",
     "test:html": "node tests/html.test.js",
-    "check:live": "node tests/live.check.js"
+    "check:live": "node tests/live.check.js",
+    "item": "node tools/add-item.js",
+    "items": "node tools/add-item.js --list"
   }
 }

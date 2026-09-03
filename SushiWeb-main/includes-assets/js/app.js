@@ -63,7 +63,7 @@ const MENU = [
 
 // أصناف SIGNATURE المستقلة (أسعارها وأسماؤها كما تظهر في الكروت — ليست من المنيو العادي)
 const SIGNATURE_ITEMS = [
-  {id:"z1", name:"The Zenith Platter", desc:"Chef's ultimate selection — سلمون فاخر وكافيار ومكس ياباني.", price:85, img:"includes-assets/images/Mega.jpg"},
+  {id:"z1", name:"White Sauce Shrimp", desc:"مكرونة فيتوتشيني - جمبري - لبن - كريمة طهي", price:160, img:"includes-assets/images/white.png"},
   {id:"z2", name:"Crimson Roll", desc:"Spicy tuna, cucumber, topped with سلمون حار.", price:13, img:"includes-assets/images/spicy_lemon.jpg"},
   {id:"z3", name:"Shogun Selection", desc:"A masterclass in traditional California nigiri.", price:11, img:"includes-assets/images/Cal.jpg"},
 ];

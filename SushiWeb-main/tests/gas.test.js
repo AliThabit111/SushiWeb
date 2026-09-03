@@ -280,6 +280,15 @@ section('12) حالات حدية');
     deliveryZone: 'منطقة مش موجودة', address: 'ش', itemsJson: cart });
   check('منطقة مجهولة: توصيل 0 + تحذير', zone.deliveryFee === 0 && zone.unknownZone === true, zone);
   check('أمر غير معروف = not_found', GET({ action: 'nope' }).status === 'not_found');
+
+  // صنف جديد على الموقع لكن مش مضاف للسيرفر: نرفض الطلب كله (مش نسجل إجمالي ناقص)
+  const rowsBefore = ordersSheet._rows.length;
+  const partial = POST({ orderId: 'TK-E8', name: 'م', phone: '01000000000', deliveryZone: 'الساحه',
+    address: 'ش', itemsJson: JSON.stringify({ r1: { qty: 2 }, NEW_ITEM: { qty: 1 } }) });
+  check('صنف ناقص من SERVER_ITEMS ⇒ الطلب كله مرفوض', partial.status === 'error', partial);
+  check('بيقول أنهي صنف بالظبط', partial.unknownItems === 'NEW_ITEM', partial.unknownItems);
+  check('فيه تعليمات الإصلاح', String(partial.hint || '').indexOf('SERVER_ITEMS') > -1, partial.hint);
+  check('مفيش صف اتكتب بإجمالي ناقص', ordersSheet._rows.length === rowsBefore, ordersSheet._rows.length);
 }
 
 section('13) Formula Injection');
