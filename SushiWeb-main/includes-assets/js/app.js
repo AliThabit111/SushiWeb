@@ -1,5 +1,5 @@
 const RESTAURANT_PHONE = "201150275016";
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw66MkfXoP7luci88HhhllP5aqGA-4chFdFYlYHarIIUqQHVbOQWnAtjWYhc7nEEIKhhQ/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwAiviZL_HtBcljxckgmNZLfRV5KWnokHibUK-WD536wdINtvqqwlnCqz8-v_pyJ_Vevg/exec";
 
 // إصدار الباك إند المطلوب — زر "فحص" بيقارن بيه النسخة المنشورة فعلاً
 const REQUIRED_SERVER_VERSION = "3.0.0";
