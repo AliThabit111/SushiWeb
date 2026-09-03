@@ -1,5 +1,5 @@
 const RESTAURANT_PHONE = "201150275016";
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz18-LsExlRqoxxKY8vaY6JsFIix-CnS3XiLlyUxml7EPGn9ab4e6KnRFvtUfcOm_Seiw/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw66MkfXoP7luci88HhhllP5aqGA-4chFdFYlYHarIIUqQHVbOQWnAtjWYhc7nEEIKhhQ/exec";
 
 // إصدار الباك إند المطلوب — زر "فحص" بيقارن بيه النسخة المنشورة فعلاً
 const REQUIRED_SERVER_VERSION = "3.0.0";
@@ -990,7 +990,7 @@ function pingServer(btn){
             '<div>اعمل 4 خطوات بالترتيب:<br>' +
             '1️⃣ افتح مشروع الإسكربت: <b>من جوجل شيت: Extensions → Apps Script</b> (أو script.google.com وافتح نفس المشروع اللي ليك عليه) — المشروع الصح هو اللي بيحفظ طلباتك<br>' +
             '2️⃣ افتح ملف <b style="direction:ltr; unicode-bidi:embed;">code.gs</b> والصق مكانه كامل محتوى<br>' +
-            '<b style="direction:ltr; unicode-bidi:embed; color:#e0b088;">https://github.com/AliThabit111/SushiWeb/blob/main/google-apps-script-code.gs</b><br>' +
+            '<b style="direction:ltr; unicode-bidi:embed; color:#e0b088;">github.com/AliThabit111/SushiWeb → SushiWeb-main/google-apps-script-code.gs</b><br>' +
             '3️⃣ زر Save ثم <b>Deploy → Manage deployments → Edit → New version → Deploy</b><br>' +
             '4️⃣ ارجع للموقع واضغط زر <b>فحص</b> — هيظهر "محدث ✓" وكل حاجة تشتغل</div>';
         }
@@ -999,8 +999,6 @@ function pingServer(btn){
     })
     .catch(()=>{ if(btn) spinnerStop(btn); showMiniToast('تعذر الوصول للسيرفر — تأكد من الاتصال بالإنترنت', false); });
 }
-// تأكيد وصول الطلب للشيت. ملاحظة: checkOrder مش محتاج كلمة مرور في v3
-// (النسخة القديمة كانت بتطلبها فالتأكيد كان بيفشل دايماً ويعيد الإرسال بلا داعي).
 // ===== تشخيص: إيه الشيت اللي الإسكربت شغال عليه فعلاً؟ =====
 // ده بيجاوب على سؤال "الموقع مربوط بأنهي داتا بيز؟" — لو الاسم مش اسم شيت
 // الطلبات بتاعك، يبقى فتحت مشروع Apps Script غلط.
@@ -1064,6 +1062,8 @@ function serverDiag(btn){
     });
 }
 
+// تأكيد وصول الطلب للشيت. ملاحظة: checkOrder مش محتاج كلمة مرور في v3
+// (النسخة القديمة كانت بتطلبها فالتأكيد كان بيفشل دايماً ويعيد الإرسال بلا داعي).
 function verifyOrderDelivery(orderId, attempt){
   attempt = attempt || 0;
   fetchWithTimeout(`${GOOGLE_SCRIPT_URL}?action=checkOrder&orderId=${encodeURIComponent(orderId)}&_=${Date.now()}`, {}, 25000)

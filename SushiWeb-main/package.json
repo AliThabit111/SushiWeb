@@ -8,6 +8,7 @@
     "test:catalog": "node tests/catalog.test.js",
     "test:gas": "node tests/gas.test.js",
     "test:app": "node tests/app.test.js",
-    "test:html": "node tests/html.test.js"
+    "test:html": "node tests/html.test.js",
+    "check:live": "node tests/live.check.js"
   }
 }
